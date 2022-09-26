@@ -1,0 +1,12 @@
+<div class="page-wrapper">
+    <div class="player" >
+        <iframe width="100%" *ngIf="player_url!=undefined" height="500px" [src]="player_url | safe"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="movie-sec">
+        <div class="titles-div">
+            <div class="titles" *ngFor="let movie of getDATA.data">
+                <app-movie-titles [data]="movie" (change)="changeMovie($event)"></app-movie-titles>
+            </div>
+        </div>
+    </div>
+</div>

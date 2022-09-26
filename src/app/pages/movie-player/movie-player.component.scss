@@ -1,0 +1,39 @@
+.page-wrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    // background-color: #f1f1f1;
+    box-shadow: rgba(239, 235, 235, 0.995) 0px 4px 12px;
+    .player{
+        width:100%;
+        height: 500px;
+    }
+    .movie-sec{
+        padding: 24px 16px;
+        overflow-x: auto;
+        background-color:#333;
+        .titles-div{
+            display: flex;
+            padding: 24px 16px;
+            overflow-x: auto;
+            margin: 0 -12px;
+            .titles{
+                min-width: calc(100%/4);
+                margin: 24px 12px;
+                // transform: scale(0.);
+                // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            }
+        }
+    }
+    .movie-sec ::-webkit-scrollbar {
+            display: none;
+          }
+}
+
+@media screen and (max-width: 768px) {
+    .page-wrapper .movie-sec .titles-div .titles{
+        min-width:100%;
+    }
+}
